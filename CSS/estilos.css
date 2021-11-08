@@ -1,0 +1,84 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #EEF9BF;
+
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 20vh;
+    padding: 0 5vw;
+    font-weight: 700;
+    text-align: center;
+}
+
+h1 {
+    color: #A7E9AF;
+    font-size: 56px;
+    font-style: normal;
+    line-height: 66px;
+    letter-spacing: -0.004em;
+}
+
+main{
+    width: 70vw;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.carta{
+    width: 117px;
+    height: 146px;
+    margin: 0 15px 30px ;
+
+    position: relative;
+}
+
+.face {
+    width: 100%;
+    height: 100%;
+    background-color: #A7E9AF;
+    border: 1px solid #99CEA8;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: all .5s;
+    transform-style: preserve-3d;
+}
+
+.face img{
+    width: 100px;
+    height: 100px;
+}
+
+
+.costas-carta {
+    transform: rotateY(180deg);
+}
+
+.carta.virada .frente-carta {
+    transform: rotateY(-180deg);
+}
+
+.carta.virada .costas-carta {
+    transform: rotateY(0deg);
+}
+
+
+@media (max-width: 600px) {
+    header h1{
+        font-size: 36px;
+    }
+}
